@@ -1,0 +1,38 @@
+{
+  "name": "iamapen/dmimage-plugins",
+  "type": "library",
+  "description": "Exif orientation support for DmImage",
+  "homepage": "https://github.com/iamapen/DmImagePlugins",
+  "keywords": ["dmimage", "exif"],
+  "license": "MIT",
+
+  "minimum-stability" : "stable",
+  "authors": [
+    {
+      "name": "Yosuke Kushida",
+      "email": "iamapen@studiopoppy.com"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.3.1",
+    "ext-gd": "*",
+    "demouth/dmimage": "dev-master#cf14053c5a57fc001eb124802f0e824bf0f19803"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Iamapen\\DmImagePlugin\\DmImage\\": "src/lib/DmImage/"
+    }
+  },
+
+  "extra": {
+    "_branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
+
