@@ -1,5 +1,5 @@
 {
-  "name": "iamapen/dmimage-plugins",
+  "name": "iamapen/dmimage-plugin",
   "type": "library",
   "description": "Exif orientation support for DmImage",
   "homepage": "https://github.com/iamapen/DmImagePlugins",
