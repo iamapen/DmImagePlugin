@@ -21,11 +21,16 @@ class VFlip extends \Dm_Image_Filter_Abstract
         $srcResource = $image->getImageResource();
 
         // 逆側から色を取得
-        for($i=0; $i<$w; $i++){
-            for($j=($h-1); $j>=0; $j--){
-                $color_index = imagecolorat($srcResource,$i,$j);
-                $colors = imagecolorsforindex($srcResource,$color_index);
-                imagesetpixel($dstResource, $i, abs($j-$h+1), imagecolorallocate($dstResource, $colors['red'], $colors['green'], $colors['blue']));
+        for ($i=0; $i<$w; $i++) {
+            for ($j=($h-1); $j>=0; $j--) {
+                $colorIndex = imagecolorat($srcResource, $i, $j);
+                $colors = imagecolorsforindex($srcResource, $colorIndex);
+                imagesetpixel(
+                    $dstResource,
+                    $i,
+                    abs($j-$h+1),
+                    imagecolorallocate($dstResource, $colors['red'], $colors['green'], $colors['blue'])
+                );
             }
         }
         return $dstResource;

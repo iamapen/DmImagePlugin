@@ -4,13 +4,14 @@ namespace Iamapen\DmImagePlugin\DmImage\Filter;
 /**
  * Exif の Orientation から、回転/反転フィルタ群を生成する
  */
-class FactoryExif {
+class FactoryExif
+{
 
     /**
      * @param int $exifOrientation
      * @return \Dm_Image_Filter_Abstract[]
      */
-    static public function createFilters($exifOrientation)
+    public static function createFilters($exifOrientation)
     {
         $filters = array();
 

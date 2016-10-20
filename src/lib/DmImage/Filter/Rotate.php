@@ -27,7 +27,7 @@ class Rotate extends \Dm_Image_Filter_Abstract
      * @param int $rightAngle 右回転角度
      * @return Rotate
      */
-    static public function createByRightAngle($rightAngle)
+    public static function createByRightAngle($rightAngle)
     {
         $leftAngle = abs(360 - $rightAngle);
         return self::createByLeftAngle($leftAngle);
@@ -38,7 +38,7 @@ class Rotate extends \Dm_Image_Filter_Abstract
      * @param int $leftAngle
      * @return Rotate
      */
-    static public function createByLeftAngle($leftAngle)
+    public static function createByLeftAngle($leftAngle)
     {
         return new self($leftAngle);
     }
@@ -49,7 +49,7 @@ class Rotate extends \Dm_Image_Filter_Abstract
      */
     public function execute(\Dm_Image $image)
     {
-        if($this->leftAngle === 0) {
+        if ($this->leftAngle === 0) {
             return $image->getImageResource();
         }
         return imagerotate($image->getImageResource(), $this->leftAngle, 0, 0);

@@ -21,11 +21,16 @@ class HFlip extends \Dm_Image_Filter_Abstract
         $srcResource = $image->getImageResource();
 
         // 逆側から色を取得
-        for($i=($w-1); $i>=0; $i--){
-            for($j=0; $j<$h; $j++){
-                $color_index = imagecolorat($srcResource,$i,$j);
-                $colors = imagecolorsforindex($srcResource,$color_index);
-                imagesetpixel($dstResource, abs($i-$w+1), $j, imagecolorallocate($dstResource, $colors['red'], $colors['green'], $colors['blue']));
+        for ($i=($w-1); $i>=0; $i--) {
+            for ($j=0; $j<$h; $j++) {
+                $colorIndex = imagecolorat($srcResource, $i, $j);
+                $colors = imagecolorsforindex($srcResource, $colorIndex);
+                imagesetpixel(
+                    $dstResource,
+                    abs($i-$w+1),
+                    $j,
+                    imagecolorallocate($dstResource, $colors['red'], $colors['green'], $colors['blue'])
+                );
             }
         }
         return $dstResource;
