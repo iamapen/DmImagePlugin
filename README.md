@@ -14,12 +14,13 @@ gdラッパの画像処理ライブラリ [DmImage](https://github.com/demouth/D
 # Install
 
 ```bash
-composer require "iamapen/dmimage-plugin"
+composer require "iamapen/dmimage-plugin" "demouth/dmimage:dev-master#cf14053c5a57fc001eb124802f0e824bf0f19803"
 ```
 
+[DmImage](https://github.com/demouth/DmImage) にタグが打たれていないため、利用側でコミットを指定する必要がある。  
+現時点(2016-10-20) での最新のコミット [cf14053](https://github.com/demouth/DmImage/commit/cf14053c5a57fc001eb124802f0e824bf0f19803) を指定している。  
+DmImage 側のAPIに変更がない限りは `@dev` 指定でもよいのだが、それは保証されていない。
 
-# 注意点
-[DmImage](https://github.com/demouth/DmImage) にタグが打たれていないので、現時点(2016-10-20) での最新のコミット `cf14053` を対象としている。
 
 # Usage
 
