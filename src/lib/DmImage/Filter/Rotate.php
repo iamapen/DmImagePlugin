@@ -4,6 +4,7 @@ namespace Iamapen\DmImagePlugin\DmImage\Filter;
 /**
  * 回転フィルタ
  * @uses demouth/dmimage dev-master#cf14053c5a57fc001eb124802f0e824bf0f19803
+ * @uses gd
  */
 class Rotate extends \Dm_Image_Filter_Abstract
 {
@@ -35,7 +36,7 @@ class Rotate extends \Dm_Image_Filter_Abstract
 
     /**
      * 左回転角度から生成する
-     * @param int $leftAngle
+     * @param int $leftAngle 左回転角度
      * @return Rotate
      */
     public static function createByLeftAngle($leftAngle)
