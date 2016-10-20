@@ -17,8 +17,11 @@ gdラッパの画像処理ライブラリ [DmImage](https://github.com/demouth/D
 composer require "iamapen/dmimage-plugin" "demouth/dmimage:dev-master#cf14053c5a57fc001eb124802f0e824bf0f19803"
 ```
 
-[DmImage](https://github.com/demouth/DmImage) にタグが打たれていないため、利用側でコミットを指定する必要がある。  
-現時点(2016-10-20) での最新のコミット [cf14053](https://github.com/demouth/DmImage/commit/cf14053c5a57fc001eb124802f0e824bf0f19803) を指定している。  
+[DmImage](https://github.com/demouth/DmImage) にタグが打たれていない。  
+安定バージョンの存在しないライブラリは、利用側(ルートパッケージ) でコミットを指定する必要がある。 
+ 
+現時点(2016-10-20) での最新のコミット [cf14053](https://github.com/demouth/DmImage/commit/cf14053c5a57fc001eb124802f0e824bf0f19803)
+であり、当ライブラリはこれを前提に作成されている。
 DmImage 側のAPIに変更がない限りは `@dev` 指定でもよいのだが、それは保証されていない。
 
 
