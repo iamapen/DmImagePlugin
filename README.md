@@ -23,8 +23,42 @@ composer require "iamapen/dmimage-plugin"
 
 # Usage
 
+### 水平反転
 ```php
+$filters = [];
+$filters[] = new \Iamapen\DmImagePlugin\DmImage\Filter\HFlip();
 
+$image = new \Dm_Image_File($src);
+$image->applyFilters($filters)->saveTo($dest, 'jpg', 90);
+```
+
+### 垂直反転
+```php
+$filters = [];
+$filters[] = new \Iamapen\DmImagePlugin\DmImage\Filter\VFlip();
+
+$image = new \Dm_Image_File($src);
+$image->applyFilters($filters)->saveTo($dest, 'jpg', 90);
+```
+
+### 回転
+右回転もしくは左回転の角度を指定してフィルタを作る。
+
+```php
+$filters = [];
+// 右180度回転
+$filters[] = \Iamapen\DmImagePlugin\DmImage\Filter\Rotate::createByRightAngle(180);
+// 左90度回転
+$filters[] = \Iamapen\DmImagePlugin\DmImage\Filter\Rotate::createByLeftAngle(90);
+
+$image = new \Dm_Image_File($src);
+$image->applyFilters($filters)->saveTo($dest, 'jpg', 90);
+```
+
+### Exif Orientation に基づく 回転/反転
+`FactoryExif::createFilters($orientation)` で、相応しいフィルタ群を生成できる。
+
+```php
 // Exif情報取得
 $exif = exif_read_data($src);
 
