@@ -1,9 +1,9 @@
 {
   "name": "iamapen/dmimage-plugin",
   "type": "library",
-  "description": "Exif orientation support for DmImage",
+  "description": "Rotate/Flip Filters for DmImage",
   "homepage": "https://github.com/iamapen/DmImagePlugins",
-  "keywords": ["dmimage", "exif"],
+  "keywords": ["gd", "exif", "dmimage"],
   "license": "MIT",
 
   "minimum-stability" : "stable",
@@ -17,6 +17,7 @@
   "require": {
     "php": ">=5.3.1",
     "ext-gd": "*",
+    "ext-exif": "*",
     "demouth/dmimage": "dev-master#cf14053c5a57fc001eb124802f0e824bf0f19803"
   },
   "require-dev": {
