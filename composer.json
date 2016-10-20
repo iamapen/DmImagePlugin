@@ -2,7 +2,7 @@
   "name": "iamapen/dmimage-plugin",
   "type": "library",
   "description": "Rotate/Flip Filters for DmImage",
-  "homepage": "https://github.com/iamapen/DmImagePlugins",
+  "homepage": "https://github.com/iamapen/DmImagePlugin",
   "keywords": ["gd", "exif", "dmimage"],
   "license": "MIT",
 
